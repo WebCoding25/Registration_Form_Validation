@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Form Validation in JavaScript</title>
+  </head>
+  <body>
+ <div class="container">
+    <p class="title"> Register Yourself</p>
+    <hr>
+    <form>
+    <div class="input-field">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter your name" id="name" onkeyup="validateName()">
+        <span id="nameError"></span>
+    </div>
+    <div class="input-field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="abc@gmail.com" id="email" onkeyup="validateEmail()">
+        <span id="emailError"></span>
+    </div>
+    <div class="input-field">
+        <label>Phone No.</label>
+        <input type="tel" name="phone" placeholder="912 345 8734" id="phone" onkeyup="validatePhone()">
+        <span id="phoneError"></span>
+    </div>
+    <div class="input-field">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter a strong password" id="password" onkeyup="validatePass()">
+        <span id="passError"></span>
+    </div>
+    <button id="submitBtn" onclick="return validateForm()" >Register Now</button>
+    <span id="submitError"></span>
+
+    <p class="footer">Already Registered ? <a href="">Click here to Login</a></p>
+</form>
+ </div>
+
+  <script src="script.js"></script>
+ 
+</body>
+</html>
